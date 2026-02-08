@@ -1,0 +1,8 @@
+# GDAL Python bindings (通过 conda 安装更可靠)
+# conda install gdal
+
+# 核心依赖
+numpy>=1.20.0
+
+# 可选依赖
+tqdm>=4.60.0  # 进度条显示
