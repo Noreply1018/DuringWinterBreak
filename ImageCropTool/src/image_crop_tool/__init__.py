@@ -19,7 +19,7 @@ Example:
     python main.py -i input.tif -o output.tif -b 100 100 500 500 -t pixel
     
     # Python代码调用
-    from src.crop_core import crop_raster
+    from .crop_core import crop_raster
     crop_raster('input.tif', 'output.tif', (100, 100, 500, 500), 'pixel')
 """
 

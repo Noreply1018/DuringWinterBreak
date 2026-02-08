@@ -51,10 +51,10 @@ if getattr(sys, 'frozen', False):
         os.environ['PROJ_LIB'] = proj_data
         os.environ['PROJ_DATA'] = proj_data
 
-# 添加项目路径
-sys.path.insert(0, os.path.dirname(__file__))
+# 添加 src 目录到路径
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-from src.gui import main
+from image_crop_tool.gui import main
 
 if __name__ == "__main__":
     main()

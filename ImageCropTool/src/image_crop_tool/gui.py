@@ -1056,7 +1056,7 @@ class ImageCropApp:
         
         try:
             # 优先使用 GDAL 裁剪以保留元数据
-            from src.crop_core import crop_by_pixel
+            from .crop_core import crop_by_pixel
             if crop_by_pixel(self.current_file, out_path, x, y, w, h):
                 messagebox.showinfo("成功", "裁剪并保存成功！")
             else:

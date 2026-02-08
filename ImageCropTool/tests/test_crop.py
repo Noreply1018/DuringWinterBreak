@@ -11,7 +11,8 @@ import sys
 import numpy as np
 
 # 添加项目路径
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+# 添加 src 目录到路径
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src'))
 
 from osgeo import gdal
 
@@ -58,7 +59,7 @@ def create_test_image(output_path: str, width: int = 500, height: int = 400) -> 
 
 def test_pixel_crop(input_path: str, output_path: str) -> bool:
     """测试像素坐标裁剪"""
-    from src.crop_core import crop_by_pixel
+    from image_crop_tool.crop_core import crop_by_pixel
     
     print("\nTesting pixel coordinate crop...")
     print(f"  Bounds: x_off=100, y_off=50, x_size=200, y_size=150")
@@ -90,7 +91,7 @@ def test_pixel_crop(input_path: str, output_path: str) -> bool:
 
 def test_geo_crop(input_path: str, output_path: str) -> bool:
     """测试地理坐标裁剪"""
-    from src.crop_core import crop_by_geo
+    from image_crop_tool.crop_core import crop_by_geo
     
     print("\nTesting geo coordinate crop...")
     print(f"  Bounds: 116.1E - 116.3E, 39.7N - 39.9N")
